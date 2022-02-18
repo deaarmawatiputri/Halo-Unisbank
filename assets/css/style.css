@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&family=Roboto:ital,wght@0,500;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    top: 0;
+    z-index: 999;
+    position: sticky;
+} 
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #F0E9D2;
+    font-family: 'Roboto', serif;
+    padding: 15px 0;
+}
+
+.ul-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.ul-links li {
+    list-style: none;
+}
+
+.ul-links a {
+    color: #461111;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ul-links a:hover {
+    font-size: 18px;
+    color : #3a1313;
+}
+
+.numpuk{
+    display: none;
+    cursor: pointer;
+}
+
+.numpuk div {
+    width: 25px;
+    height: 3px;
+    background-color: #3a1313;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+    .ul-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+   .ul-links {
+       position: absolute;
+       right: 0px;
+       height: 90vh;
+       top: 10vh;
+       background-color: #F0E9D2;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 40%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+   }
+   .ul-links a {
+       font-size: 16px;
+       font-family: 'Roboto', serif;
+   }
+
+   .ul-links li {
+       opacity: 0;
+   }
+
+   .numpuk {
+       display: block;
+   }
+
+   .welcome .content-left img {
+       width: 0px;
+   }
+
+   .welcome .content-right {
+       margin: 0;
+       width: 100%;
+       text-align: center;
+   }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.welcome-article {
+    width: 100%;
+    background-color: white;
+}
+
+.welcome {
+    display: flex;
+    padding: 40px;
+    overflow: auto;
+    background-color: white;
+    justify-content: center;
+}
+
+main h1, h2, p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+main h1 {
+    font-size: 60px;
+    color: #461111;
+    text-transform: uppercase;
+}
+
+main h2 {
+    font-size: 40px;
+    color: #A13333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+main p {
+   font-size: 16px;
+   font-weight: 400;
+   color: black;
+   line-height: 31px;
+   margin: 30px 0;
+}
+
+.content-left {
+    width: 45%;
+}
+
+.content-right {
+    padding: 100px;
+}
+
+/* BUTTON */
+
+.btn {
+    padding: 15px 30px;
+    background: #876445;
+    color: azure;
+    outline: none;
+    border: none;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: #CA965C;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #CA965C;
+}
+
+/* AKADEMIK */
+
+.header-akademik {
+    text-align: center;
+    font-size: 50px;
+}
+
+.akademik {
+    text-align: center;
+    padding: 50px;
+}
+
+.akademik h1 {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.akademik h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: brown;
+}
+
+.akademik .ul-akademik {
+    font-size: 16px;
+}
+
+.card-menu {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px #533535;
+    text-align: center;
+}
+
+.card-menu .card-input {
+    width: 25%;
+    background-color: #3a1313;
+    display: inline-block;
+    margin: 45px 30px;
+    border-radius: 40px;
+    box-shadow: 0 0 3px 3px #3a1313;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.card-menu .card-input:hover {
+    box-shadow: 0 0 30px chocolate;
+}
+  
+.card-menu .card-input .card-img {
+    margin: 30px auto;
+}
+
+.card-menu .ul-akademik {
+    text-decoration: none;
+}
+
+.card-menu .ul-akademik li {
+    list-style: none;
+    text-align: center;
+}
+
+.card-img img {
+    width: 150px;
+    margin: auto;
+    filter: drop-shadow(3px 3px 3px #3a1313);
+}
+
+/* KEMAHASISWAAN */
+
+.kemahasiswaan {
+    text-align: center;
+    padding: 50px;
+}
+
+.kemahasiswaan h1 {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.kemahasiswaan h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: brown;
+}
+
+.kemahasiswaan .ul-kemahasiswaan {
+    font-size: 16px;
+}
+
+.card-menu {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px #6C4A4A;
+    text-align: center;
+}
+
+.card-menu .card-input {
+    width: 40%;
+    background-color: white;
+    display: inline-block;
+    margin: 45px 30px;
+    border-radius: 40px;
+    box-shadow: 0 0 3px 3px white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.card-menu .card-input:hover {
+    box-shadow: 0 0 30px #C0A080;
+}
+  
+.card-menu .card-input .card-img {
+    margin: 30px auto;
+}
+
+.card-menu .ul-kemahasiswaan {
+    text-decoration: none;
+}
+
+.card-menu .ul-kemahasiswaan li {
+    list-style: none;
+    text-align: center;
+}
+
+.card-img img {
+    width: 150px;
+    margin: auto;
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+/* ABOUT US */
+
+
+.about-us {
+    padding-top: 10px;
+    background-color: white;
+    padding-bottom: 100px;
+    padding: 50px;
+}
+
+
+.about-us h1 {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.profil {
+    margin: 0 auto;
+    width: 90%;
+    padding: 30px;
+    border-radius: 10px;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 3px #6C4A4A;
+    text-align: center;
+}
+  
+.profil h1 {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+
+.profil .card-profil {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-profil .img-profil img {
+    width: 150px;
+}
+  
+.card-profil h5 {
+    font-size: 25px;
+    color: #3a1313;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.card-profil table {
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    font-size: 18px;
+    text-align: justify;
+}  
+
+.profil header {
+    text-align: center;
+}
+
+.profil img {
+   width: 100px;
+   text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    color: #461111;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #F0E9D2;
+    text-align: center;
+    font-weight: bold;
+}
